@@ -336,7 +336,7 @@
                                             <img src="{{ asset('uploads/customers/' . $customer->image) }}" alt="..."
                                                 class="avatar-img rounded-circle">
                                         @elseif ($customer->provider=='google')
-                                            <img src="{{ $customer->image }}" alt="..."
+                                            <img src="{{ $customer->image }}" alt="{{ $customer->name }}"
                                                 class="avatar-img rounded-circle">
                                         @else
                                             <span class="avatar-title rounded-circle border border-white">

@@ -44,23 +44,7 @@
                                 <div class="tab-content" id="custom-content-below-tabContent">
                                     <form method="GET" action="{{ route('admin.promotion.index') }}">
                                         <div class="row">
-                                            <div class="col-md-6 filter">
-                                                <label for="start_date">{{ __('Start Date') }}</label>
-                                                <div class="input-group input-group-alternative">
-                                                    <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
-                                                    <input type="date" id="start_date" class="form-control flatpickr"
-                                                        placeholder="Select Start Date" name="start_date" value="{{ request('start_date') }}">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 filter">
-                                                <label for="end_date">{{ __('End Date') }}</label>
-                                                <div class="input-group input-group-alternative">
-                                                    <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
-                                                    <input type="date" id="end_date" class="form-control flatpickr"
-                                                        placeholder="Select End Date" name="end_date" value="{{ request('end_date') }}">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 mt-3">
+                                            <div class="col-lg-4 col-md-6 col-sm-6">
                                                 <label for="discount_type">{{ __('Discount Type') }}</label>
                                                 <select name="discount_type" id="discount_type" class="form-control select2">
                                                     <option value="" {{ request('discount_type') == '' ? 'selected' : '' }}>
@@ -74,7 +58,23 @@
                                                     </option>
                                                 </select>
                                             </div>
-                                            <div class="d-flex align-items-end justify-content-end col-md-6 mt-3" style="gap: 10px">
+                                            <div class="col-lg-4 col-md-6 col-sm-6 filter">
+                                                <label for="start_date">{{ __('Start Date') }}</label>
+                                                <div class="input-group input-group-alternative">
+                                                    <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                                    <input type="date" id="start_date" class="form-control flatpickr"
+                                                        placeholder="Select Start Date" name="start_date" value="{{ request('start_date') }}">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-6 filter">
+                                                <label for="end_date">{{ __('End Date') }}</label>
+                                                <div class="input-group input-group-alternative">
+                                                    <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                                    <input type="date" id="end_date" class="form-control flatpickr"
+                                                        placeholder="Select End Date" name="end_date" value="{{ request('end_date') }}">
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-end justify-content-end col-lg-12 col-md-12 col-sm-12 mt-4" style="gap: 10px">
                                                 <button type="submit" class="btn btn-primary btn-sm mb-0">
                                                     <i class="fa fa-filter" aria-hidden="true"></i>
                                                     {{ __('Filter') }}
